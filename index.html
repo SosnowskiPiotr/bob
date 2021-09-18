@@ -5,10 +5,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bob</title>
+    <style>
+        *{
+            margin: 0;
+        }
+        button{
+            background-image: linear-gradient(90deg, #00C0FF 0%, #FFCF00 49%, #FC4F4F 80%, #00C0FF 100%);
+   animation:slidebg 5s linear infinite;
+   border: none;
+   font-size: large;
+   padding: 15px;
+        }
+        
+@keyframes slidebg {
+  to {
+    background-position:20vw;
+  }
+}
+    </style>
 </head>
 <body>
-    <div style="display: flex; align-items: center; justify-content: center;">
-        <img src="bob.jpg" alt="" style="display: none;">
+    <div style="display: flex; align-items: center; justify-content: center; height: 100vh;">
+        <img id = "bob"src="bob.jpg" alt="" style="display: none;" width="80%">
+        <button id = "bt" onclick="hid()">ocenka zdjecia</button>
     </div>
+    <script>
+        var button = document.getElementById("bt");
+        var bob = document.getElementById("bob");
+        function hid() {
+            button.style.display = "none";
+            bob.style.display = "block";
+        }
+    </script>
 </body>
 </html>
